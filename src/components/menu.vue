@@ -1,5 +1,5 @@
 <template>
-    <header :class >
+    <header :class="className">
 
         <div v-if="extraHeader">
             <div class="site-logo" :class="logoColor" >Wild Rydes  </div>

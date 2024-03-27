@@ -154,7 +154,7 @@ var config = require('../config.js')
                     this.requestUnicorn(this.webmap.selectedPoint);
                 },
                 requestUnicorn: function(pickupLocation){
-                        self = this
+                    var self = this;
                         axios({
                             method: 'POST',
                             url: config.api.invokeUrl + "/ride",

@@ -13,7 +13,7 @@
             <ol id="updates">
                 <li>Welcome! Click the map to set your pickup location.</li>
                 <li>You are authenticated, Click here to see your <a v-on:click="show()">auth token</a></li>
-                <li v-for="item in items">
+                <li v-for="item in items" :key="index">
                     {{ item.message }}
                 </li>
             </ol>
@@ -38,7 +38,8 @@
                         <p>This page is not functional yet because there is no API invoke URL configured in <a href="/src/config.js">/src/config.js</a>. You'll configure this in Module 3.</p>
                         <p>In the meantime, if you'd like to test the Amazon Cognito user pool authorizer for your API, use the auth token below:</p>
                     </div>
-                    <textarea class="authToken">{{authToken}}</textarea>
+                    <!-- <textarea class="authToken">{{authToken}}</textarea> -->
+                    <textarea class="authToken" v-model="authToken"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" v-on:click="hide()" class="btn btn-default" data-dismiss="modal">Close</button>
